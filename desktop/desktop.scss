@@ -1,0 +1,80 @@
+// Variables
+// *------------------------------------------------*
+$color-white: #ffffff;
+$color-black: #000000;
+$color-cream: #FAFFFD;
+$color-mud: #f4d35e;
+$color-royal: #3c73ff;
+$color-green: #2ecc71;
+$color-turqoise: #CCE1EA;
+$color-light-violet: #99bdff;
+$gradient-pink: linear-gradient(146deg,rgba(255,74,158,0) 55%,rgba(255,74,158,.4) 100%);
+$gradient-blue: linear-gradient(200deg,rgba(255,74,158,0) 45%,rgba(40, 13, 194, 0.068) 100%);
+
+$radius-2: 2px;
+$radius-4: 4px;
+$radius-8: 8px;
+$radius-20: 20px;
+// Container
+// *------------------------------------------------*
+#main-outlet {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  background: #262626;
+  width: 75%;
+  max-width: 1030px;
+  padding: 3em 3em 5%;
+  padding-bottom: 5% !important;
+  border-top: 8px solid $color-royal;
+}
+
+#main-outlet:after  {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 500px;
+  height: 500px;
+  border-radius: 2000px;
+  background: -webkit-linear-gradient(330deg,rgba(255,74,158,0) 45%,rgba(255, 74, 158, 0.4) 100%);
+  background: $gradient-pink;
+  right: 1px;
+  top: -57px;
+}
+
+#main-outlet:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 500px;
+  height: 500px;
+  border-radius: 2000px;
+  background: -webkit-linear-gradient(330deg,rgba(255,74,158,0) 45%,rgba(255,74,158,.4) 100%);
+  background: $gradient-pink;
+  left: 4px;
+  top: 500px;
+}
+
+// Navigation Bar
+// *------------------------------------------------*
+.nav-pills li a {  
+  &.active {
+    background-color: $color-green;
+    border-radius: $radius-2;
+    color: $color-white;
+  }
+  &:hover {
+    border-radius: $radius-2;
+    background-color: $tertiary;
+    color: $color-white;
+    box-shadow: 0 8px 60px 0 rgba(103,151,255,.20), 0 12px 90px 0 rgba(103,151,255,.20);
+  }
+}
+
+.list-controls .combo-box .combo-box-header {
+  background: transparent;
+  color: $color-white;
+  border: none;
+}

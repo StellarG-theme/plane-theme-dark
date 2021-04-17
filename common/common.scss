@@ -1,0 +1,220 @@
+$color-white: #ffffff;
+$color-black: #000000;
+$color-yellow: #f7b42c;
+$color-cream: #f0e5d8;
+$color-grey: #121212;
+$color-red: #fc575e;
+$header-gradient: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
+
+$radius-2: 2px;
+$radius-4: 4px;
+$radius-6: 6px;
+$radius-10: 10px;
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: local('Rubik Medium'), local('Rubik-Medium'), url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7Eyjmmd8WD07oB-.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+$base-font-family: 'Rubik', sans-serif;
+
+html {
+  font-family: $base-font-family;
+  background: $color-white;
+}
+
+
+body {
+  background: url($texture);
+  background-attachment: fixed;
+  background-size: 1096px;
+}
+
+// Header
+// *------------------------------------------------*
+.d-header {
+//  background-color: $color-blue;
+  background-image: $header-gradient;
+  height: 5em;
+}
+
+.menu-panel {
+  border-radius: $radius-6;
+  background-color: $color-grey;
+  .panel-body-bottom .btn:hover {
+    background: $color-red;
+  }
+  li a.widget-link .d-icon, .menu-panel li a.categories-link .d-icon {
+    color: $color-red;
+  }
+}
+
+// New Topic Button
+// *------------------------------------------------*
+#create-topic {
+  color: $color-white;
+  background-color: $color-red;
+  border-radius: $radius-2;
+  .fa {
+    color: $color-white;
+  }
+  &:hover {
+    background: $color-red;
+    color: $color-white;
+    border-radius: $radius-2;
+    box-shadow: 0 1px 8px $color-red;
+    .fa {
+      color: $color-white;
+    }
+  }
+}
+
+// Container
+// *------------------------------------------------*
+#main-outlet {
+  background: $secondary;
+}
+
+// Buttons
+// *------------------------------------------------*
+.btn {
+  background: $primary-low;
+  color: $color-white;
+  border-radius: $radius-6;
+  .discourse-no-touch & {
+    &:hover, 
+    &.btn-hover {
+      color: $color-white;
+      background: $color-red;
+      .d-icon {
+        color: $color-white;
+      }
+    }
+  }
+  &:hover, 
+  &.btn-hover {
+    color: $color-white;
+    background: $color-red;
+    .d-icon {
+      color: $color-red;
+    }
+  }
+  &:active, 
+  &.btn-active {
+    background-image: none;
+    background-color: $color-red;
+    color: $color-white;
+    .d-icon {
+      color: $color-white;
+    }
+  } 
+}
+
+.btn-danger {
+  background-color: $danger;
+  color: $color-white;
+  .d-icon {
+    color: $color-white;
+  }
+  &:active, 
+  &.btn-active {
+    .d-icon {
+      color: $color-white;
+    }
+  } 
+  .discourse-no-touch & {
+    &:hover, 
+    &.btn-hover {
+      background-color: $danger-hover;
+      color: $color-cream;
+      .d-icon {
+        color: $color-cream;
+      }
+    }
+  }
+}
+
+.btn-primary {
+  .d-icon {
+    color: $color-white;
+  }
+}
+
+.select-kit.dropdown-select-box .dropdown-select-box-header {
+  border: 1px solid $primary-low;
+}
+
+// Modal
+// *------------------------------------------------*
+.modal-inner-container {
+  border-radius: $radius-4;
+}
+
+.list-controls .combo-box .combo-box-header {
+  border: 0;
+  background: none;
+}
+
+ul.nav-pills {
+  padding-left: 10px;
+}
+
+// Topic Page
+// *------------------------------------------------*
+.timeline-container .topic-timeline { 
+  .timeline-scrollarea {
+    border-color: $color-cream;
+  }
+  .timeline-handle {
+    background-color: $color-cream;
+  }
+}
+
+.post-stream .names .username {
+  font-size: 1.1em;
+}
+
+// User Page
+// *------------------------------------------------*
+.user-content {
+  background: transparent;
+}
+
+// Advanced Search
+// *------------------------------------------------*
+.search-container .search-advanced-sidebar {
+  .search-advanced-title {
+    background: $header-gradient;
+  }
+}
+
+// Admin
+// *------------------------------------------------*
+.admin-controls {
+  .nav-pills>li a.active {
+    background: none;
+    color: $color-red;
+  }
+}
+
+// Other
+// *------------------------------------------------*
+a, .fps-result a.search-link:visited .topic-title {
+  color: $color-yellow;
+  &:hover {
+  color: $color-yellow;
+  }
+}
+
+a:visited {
+  color: $color-yellow;
+}
+
+.open .grippie {
+  background: $header-gradient;
+}
